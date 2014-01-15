@@ -20,7 +20,8 @@ public class Main {
 			displayHelp();
 
 		else {
-			webAssertion.Assertion assertion;
+			webAssertion.Assertion assertion = new Assertion(args[0], args[1]);
+
 		}
 	}
 

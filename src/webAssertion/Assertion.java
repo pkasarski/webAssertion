@@ -9,37 +9,22 @@ package webAssertion;
  */
 public class Assertion {
 	// the aspect of the site you want to test, as an XPath query
-	private String query;
+	private final String query;
 	// whether you are interested in this query being true or false
-	private boolean tf;
-
-	public boolean test() {
-
-	}
+	private final boolean tf;
+	
+	private driver = new WebD
 
 	/**
 	 * @param xPath
 	 * @param tf
 	 */
-	public Assertion(String xPath, boolean tf) {
-		query = xPath;
-		this.tf = tf;
+	public Assertion(String bool, String query) {
+		this.tf = Boolean.parseBoolean(bool);
+		this.query = query;
 	}
 
-	public String getXPath() {
-		return query;
-	}
+	public boolean test() {
 
-	public void setXPath(String xPath) {
-		query = xPath;
 	}
-
-	public boolean isTf() {
-		return tf;
-	}
-
-	public void setTf(boolean tf) {
-		this.tf = tf;
-	}
-
 }
